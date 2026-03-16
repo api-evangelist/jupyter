@@ -1,106 +1,81 @@
+aid: jupyter
 name: Jupyter
-description: Open-source web application for creating and sharing documents containing live code, equations, visualizations and narrative text
-image: https://jupyter.org/assets/share.png
-created: 2024-01-01 00:00:00+00:00
-modified: 2024-01-01 00:00:00+00:00
-specificationVersion: '0.18'
-url: https://jupyter.org/apis.json
+description: >-
+  Project Jupyter is an open-source project that provides a web application for
+  creating and sharing documents containing live code, equations, visualizations
+  and narrative text. The Jupyter ecosystem includes Jupyter Notebook,
+  JupyterHub, JupyterLab, and Jupyter Server.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-- Interactive Computing
-- Notebooks
-- Data Science
-- Python
-- Scientific Computing
-- Education
-apis:
-- name: Jupyter Notebook API
-  description: REST API for interacting with Jupyter Notebook servers
-  image: https://jupyter.org/assets/share.png
-  humanURL: https://jupyter-notebook.readthedocs.io/
-  baseURL: http://localhost:8888
-  tags:
-  - Notebooks
   - Interactive Computing
-  - REST API
-  properties:
-  - type: Documentation
-    url: https://jupyter-notebook.readthedocs.io/en/stable/extending/rest_api.html
-  - type: OpenAPI
-    url: https://petstore.swagger.io/?url=https://raw.githubusercontent.com/jupyter/notebook/master/notebook/services/api/api.yaml
-  - type: GitHubRepository
-    url: https://github.com/jupyter/notebook
-- name: JupyterHub API
-  description: REST API for managing multi-user Jupyter notebook servers
-  image: https://jupyter.org/assets/share.png
-  humanURL: https://jupyterhub.readthedocs.io/
-  baseURL: http://localhost:8000/hub/api
-  tags:
-  - Multi-user
-  - Authentication
-  - Hub
-  - REST API
-  properties:
-  - type: Documentation
-    url: https://jupyterhub.readthedocs.io/en/stable/reference/rest-api.html
-  - type: OpenAPI
-    url: https://raw.githubusercontent.com/jupyterhub/jupyterhub/master/docs/rest-api.yml
-  - type: GitHubRepository
-    url: https://github.com/jupyterhub/jupyterhub
-- name: Jupyter Server API
-  description: Core REST API for Jupyter Server
-  image: https://jupyter.org/assets/share.png
-  humanURL: https://jupyter-server.readthedocs.io/
-  baseURL: http://localhost:8888
-  tags:
-  - Server
-  - REST API
-  - Kernels
-  - Contents
-  properties:
-  - type: Documentation
-    url: https://jupyter-server.readthedocs.io/en/latest/developers/rest-api.html
-  - type: GitHubRepository
-    url: https://github.com/jupyter-server/jupyter_server
-  - type: ChangeLog
-    url: https://github.com/jupyter-server/jupyter_server/blob/main/CHANGELOG.md
-- name: Jupyter Kernel Gateway API
-  description: Web server providing headless access to Jupyter kernels
-  image: https://jupyter.org/assets/share.png
-  humanURL: https://jupyter-kernel-gateway.readthedocs.io/
-  baseURL: http://localhost:8888
-  tags:
-  - Kernels
-  - Gateway
-  - Headless
-  - REST API
-  properties:
-  - type: Documentation
-    url: https://jupyter-kernel-gateway.readthedocs.io/en/latest/
-  - type: GitHubRepository
-    url: https://github.com/jupyter/kernel_gateway
-  - type: WebSocketAPI
-    url: https://jupyter-kernel-gateway.readthedocs.io/en/latest/websocket-mode.html
+  - Notebooks
+  - Data Science
+  - Python
+  - Scientific Computing
+  - Education
+url: https://raw.githubusercontent.com/api-evangelist/jupyter/refs/heads/main/apis.yml
+created: '2024-01-01'
+modified: '2026-03-16'
+specificationVersion: '0.19'
+apis:
+  - aid: jupyter:notebook-api
+    name: Jupyter Notebook API
+    description: >-
+      REST API for interacting with Jupyter Notebook servers, managing kernels,
+      sessions, contents, and terminals.
+    humanURL: https://jupyter-notebook.readthedocs.io/
+    baseURL: http://localhost:8888
+    tags:
+      - Notebooks
+      - Interactive Computing
+      - REST API
+    properties:
+      - type: Documentation
+        url: https://jupyter-notebook.readthedocs.io/en/stable/extending/rest_api.html
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/jupyter/notebook/master/notebook/services/api/api.yaml
+  - aid: jupyter:jupyterhub-api
+    name: JupyterHub API
+    description: >-
+      REST API for managing multi-user Jupyter notebook servers including
+      users, servers, and services.
+    humanURL: https://jupyterhub.readthedocs.io/
+    baseURL: http://localhost:8000/hub/api
+    tags:
+      - Multi-user
+      - Authentication
+      - Hub
+    properties:
+      - type: Documentation
+        url: https://jupyterhub.readthedocs.io/en/stable/reference/rest-api.html
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/jupyterhub/jupyterhub/master/docs/rest-api.yml
+  - aid: jupyter:jupyter-server-api
+    name: Jupyter Server API
+    description: >-
+      Core REST API for Jupyter Server providing kernels, sessions, contents,
+      and terminal management.
+    humanURL: https://jupyter-server.readthedocs.io/
+    baseURL: http://localhost:8888
+    tags:
+      - Server
+      - REST API
+      - Kernels
+    properties:
+      - type: Documentation
+        url: https://jupyter-server.readthedocs.io/en/latest/developers/rest-api.html
 common:
-- type: Website
-  url: https://jupyter.org
-- type: GitHub Organization
-  url: https://github.com/jupyter
-- type: Documentation
-  url: https://docs.jupyter.org/
-- type: Blog
-  url: https://blog.jupyter.org/
-- type: Community
-  url: https://jupyter.org/community
-- type: Discourse Forum
-  url: https://discourse.jupyter.org/
-- type: Gitter Chat
-  url: https://gitter.im/jupyter/jupyter
-- type: Security
-  url: https://jupyter.org/security
-- type: Governance
-  url: https://jupyter.org/governance
+  - type: Website
+    url: https://jupyter.org
+  - type: Documentation
+    url: https://docs.jupyter.org/
+  - type: Blog
+    url: https://blog.jupyter.org/
+  - type: GitHub Organization
+    url: https://github.com/jupyter
+  - type: Community
+    url: https://jupyter.org/community
 maintainers:
-- name: Project Jupyter
-  email: jupyter@googlegroups.com
-  url: https://jupyter.org
-  github: jupyter
+  - FN: Kin Lane
+    email: kin@apievangelist.com
