@@ -8,12 +8,12 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
+  - Data Science
+  - Education
   - Interactive Computing
   - Notebooks
-  - Data Science
   - Python
   - Scientific Computing
-  - Education
 url: https://raw.githubusercontent.com/api-evangelist/jupyter/refs/heads/main/apis.yml
 created: '2024-01-01'
 modified: '2026-03-16'
@@ -27,8 +27,8 @@ apis:
     humanURL: https://jupyter-notebook.readthedocs.io/
     baseURL: http://localhost:8888
     tags:
-      - Notebooks
       - Interactive Computing
+      - Notebooks
       - REST API
     properties:
       - type: Documentation
@@ -43,9 +43,9 @@ apis:
     humanURL: https://jupyterhub.readthedocs.io/
     baseURL: http://localhost:8000/hub/api
     tags:
-      - Multi-user
       - Authentication
       - Hub
+      - Multi-User
     properties:
       - type: Documentation
         url: https://jupyterhub.readthedocs.io/en/stable/reference/rest-api.html
@@ -59,9 +59,9 @@ apis:
     humanURL: https://jupyter-server.readthedocs.io/
     baseURL: http://localhost:8888
     tags:
-      - Server
-      - REST API
       - Kernels
+      - REST API
+      - Server
     properties:
       - type: Documentation
         url: https://jupyter-server.readthedocs.io/en/latest/developers/rest-api.html
