@@ -1,97 +1,94 @@
 # Jupyter (jupyter)
-Open-source web application for creating and sharing documents containing live code, equations, visualizations and narrative text
 
-**URL:** [Visit APIs.json URL](https://jupyter.org/apis.json)
+Project Jupyter is an open-source initiative that develops the software, open standards, and services for interactive computing across dozens of programming languages. The Jupyter ecosystem includes Jupyter Notebook, JupyterLab, Jupyter Server, JupyterHub, the Jupyter messaging protocol, and supporting client libraries.
 
-## Tags:
+**APIs.yml:** [https://raw.githubusercontent.com/api-evangelist/jupyter/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/jupyter/refs/heads/main/apis.yml)
 
- - Interactive Computing, Notebooks, Data Science, Python, Scientific Computing, Education
+## Tags
+
+- Interactive Computing
+- Notebooks
+- Data Science
+- Python
+- Scientific Computing
+- Education
 
 ## Timestamps
 
-- **Created:** 2024-01-01 00:00:00+00:00 
-- **Modified:** 2024-01-01 00:00:00+00:00 
+- **Created:** 2024-01-01
+- **Modified:** 2026-04-28
 
 ## APIs
 
-### Jupyter Notebook API
-REST API for interacting with Jupyter Notebook servers
+### Jupyter Notebook
 
-**Human URL:** [https://jupyter-notebook.readthedocs.io/](https://jupyter-notebook.readthedocs.io/)
+Original Jupyter web application and REST API for creating, editing, and running notebooks. Includes the kernel messaging protocol and supporting OpenAPI, JSON Schema, and AsyncAPI artifacts.
 
+**Human URL:** https://jupyter-notebook.readthedocs.io/
 
-#### Tags:
-
- - Notebooks, Interactive Computing, REST API
+**Base URL:** http://localhost:8888
 
 #### Properties
 
-- [Documentation](https://jupyter-notebook.readthedocs.io/en/stable/extending/rest_api.html)
-- [OpenAPI](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/jupyter/notebook/master/notebook/services/api/api.yaml)
-- [GitHubRepository](https://github.com/jupyter/notebook)
+- [APIsYAML](https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml)
+- [Documentation](https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html)
+- [Repository](https://github.com/jupyter/notebook)
 
-### JupyterHub API
-REST API for managing multi-user Jupyter notebook servers
+### Jupyter Server
 
-**Human URL:** [https://jupyterhub.readthedocs.io/](https://jupyterhub.readthedocs.io/)
+Backend that powers Jupyter Notebook, JupyterLab, and other Jupyter web applications. Exposes the core REST API and WebSocket messaging endpoints used to communicate with kernels.
 
+**Human URL:** https://jupyter-server.readthedocs.io/en/latest/developers/index.html
 
-#### Tags:
-
- - Multi-user, Authentication, Hub, REST API
+**Base URL:** http://localhost:8888/api
 
 #### Properties
 
-- [Documentation](https://jupyterhub.readthedocs.io/en/stable/reference/rest-api.html)
-- [OpenAPI](https://raw.githubusercontent.com/jupyterhub/jupyterhub/master/docs/rest-api.yml)
-- [GitHubRepository](https://github.com/jupyterhub/jupyterhub)
-
-### Jupyter Server API
-Core REST API for Jupyter Server
-
-**Human URL:** [https://jupyter-server.readthedocs.io/](https://jupyter-server.readthedocs.io/)
-
-
-#### Tags:
-
- - Server, REST API, Kernels, Contents
-
-#### Properties
-
+- [APIsYAML](https://raw.githubusercontent.com/api-evangelist/jupyter-server/refs/heads/main/apis.yml)
 - [Documentation](https://jupyter-server.readthedocs.io/en/latest/developers/rest-api.html)
-- [GitHubRepository](https://github.com/jupyter-server/jupyter_server)
-- [ChangeLog](https://github.com/jupyter-server/jupyter_server/blob/main/CHANGELOG.md)
+- [Repository](https://github.com/jupyter-server/jupyter_server)
 
-### Jupyter Kernel Gateway API
-Web server providing headless access to Jupyter kernels
+### JupyterHub
 
-**Human URL:** [https://jupyter-kernel-gateway.readthedocs.io/](https://jupyter-kernel-gateway.readthedocs.io/)
+Multi-user server for Jupyter notebooks. Manages authentication, spawns and proxies multiple instances of the single-user Jupyter notebook server, and exposes a REST API for users, groups, services, tokens, and OAuth2.
 
+**Human URL:** https://jupyterhub.readthedocs.io/
 
-#### Tags:
-
- - Kernels, Gateway, Headless, REST API
+**Base URL:** http://localhost:8000/hub/api
 
 #### Properties
 
-- [Documentation](https://jupyter-kernel-gateway.readthedocs.io/en/latest/)
-- [GitHubRepository](https://github.com/jupyter/kernel_gateway)
-- [WebSocketAPI](https://jupyter-kernel-gateway.readthedocs.io/en/latest/websocket-mode.html)
+- [APIsYAML](https://raw.githubusercontent.com/api-evangelist/jupyterhub/refs/heads/main/apis.yml)
+- [Documentation](https://jupyterhub.readthedocs.io/en/stable/reference/rest-api.html)
+- [Repository](https://github.com/jupyterhub/jupyterhub)
+
+### JupyterLab
+
+Next-generation web-based interactive development environment for notebooks, code, and data, with a JupyterLab Server REST API for settings, workspaces, themes, translations, and licenses.
+
+**Human URL:** https://jupyterlab.readthedocs.io/
+
+**Base URL:** http://localhost:8888/lab/api
+
+#### Properties
+
+- [APIsYAML](https://raw.githubusercontent.com/api-evangelist/jupyterlab/refs/heads/main/apis.yml)
+- [Documentation](https://jupyterlab.readthedocs.io/en/stable/)
+- [Repository](https://github.com/jupyterlab/jupyterlab)
 
 ## Common Properties
 
 - [Website](https://jupyter.org)
-- [GitHub Organization](https://github.com/jupyter)
 - [Documentation](https://docs.jupyter.org/)
 - [Blog](https://blog.jupyter.org/)
+- [GitHub Organization](https://github.com/jupyter)
 - [Community](https://jupyter.org/community)
-- [Discourse Forum](https://discourse.jupyter.org/)
-- [Gitter Chat](https://gitter.im/jupyter/jupyter)
+- [Support](https://discourse.jupyter.org/)
 - [Security](https://jupyter.org/security)
-- [Governance](https://jupyter.org/governance)
+- [YouTube](https://www.youtube.com/@ProjectJupyter)
 
 ## Maintainers
 
-**FN:** Project Jupyter
+**FN:** Kin Lane
 
-**Email:** jupyter@googlegroups.com
+**Email:** kin@apievangelist.com
