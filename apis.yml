@@ -40,6 +40,8 @@ apis:
         url: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
       - type: Repository
         url: https://github.com/jupyter/notebook
+      - type: OpenAPI
+        url: openapi/jupyter-openapi.yml
   - aid: jupyter:jupyter-server
     name: Jupyter Server
     description: >-
