@@ -1,0 +1,518 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Jupyter Server REST API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get server version",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8888/api/"
+      },
+      "docs": "Get server version"
+    },
+    {
+      "info": {
+        "name": "Get server status",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8888/api/status"
+      },
+      "docs": "Get server status"
+    },
+    {
+      "info": {
+        "name": "Get current user identity",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8888/api/me"
+      },
+      "docs": "Get current user identity"
+    },
+    {
+      "info": {
+        "name": "Get file or directory contents",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8888/api/contents/:path",
+        "params": [
+          {
+            "name": "path",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get file or directory contents"
+    },
+    {
+      "info": {
+        "name": "Create new file or directory",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8888/api/contents/:path",
+        "params": [
+          {
+            "name": "path",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create new file or directory"
+    },
+    {
+      "info": {
+        "name": "Save or upload file",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:8888/api/contents/:path",
+        "params": [
+          {
+            "name": "path",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Save or upload file"
+    },
+    {
+      "info": {
+        "name": "Rename file or directory",
+        "type": "http"
+      },
+      "http": {
+        "method": "PATCH",
+        "url": "http://localhost:8888/api/contents/:path",
+        "params": [
+          {
+            "name": "path",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Rename file or directory"
+    },
+    {
+      "info": {
+        "name": "Delete file or directory",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8888/api/contents/:path",
+        "params": [
+          {
+            "name": "path",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete file or directory"
+    },
+    {
+      "info": {
+        "name": "List checkpoints for a file",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8888/api/contents/:path/checkpoints",
+        "params": [
+          {
+            "name": "path",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List checkpoints for a file"
+    },
+    {
+      "info": {
+        "name": "Create checkpoint",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8888/api/contents/:path/checkpoints",
+        "params": [
+          {
+            "name": "path",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Create checkpoint"
+    },
+    {
+      "info": {
+        "name": "Restore checkpoint",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8888/api/contents/:path/checkpoints/:checkpoint_id",
+        "params": [
+          {
+            "name": "path",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "checkpoint_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Restore checkpoint"
+    },
+    {
+      "info": {
+        "name": "Delete checkpoint",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8888/api/contents/:path/checkpoints/:checkpoint_id",
+        "params": [
+          {
+            "name": "path",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "checkpoint_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete checkpoint"
+    },
+    {
+      "info": {
+        "name": "List sessions",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8888/api/sessions"
+      },
+      "docs": "List sessions"
+    },
+    {
+      "info": {
+        "name": "Create session",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8888/api/sessions",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create session"
+    },
+    {
+      "info": {
+        "name": "Get session",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8888/api/sessions/:session",
+        "params": [
+          {
+            "name": "session",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get session"
+    },
+    {
+      "info": {
+        "name": "Update session",
+        "type": "http"
+      },
+      "http": {
+        "method": "PATCH",
+        "url": "http://localhost:8888/api/sessions/:session",
+        "params": [
+          {
+            "name": "session",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update session"
+    },
+    {
+      "info": {
+        "name": "Delete session",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8888/api/sessions/:session",
+        "params": [
+          {
+            "name": "session",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete session"
+    },
+    {
+      "info": {
+        "name": "List kernels",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8888/api/kernels"
+      },
+      "docs": "List kernels"
+    },
+    {
+      "info": {
+        "name": "Start kernel",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8888/api/kernels",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Start kernel"
+    },
+    {
+      "info": {
+        "name": "Get kernel",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8888/api/kernels/:kernel_id",
+        "params": [
+          {
+            "name": "kernel_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get kernel"
+    },
+    {
+      "info": {
+        "name": "Stop kernel",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8888/api/kernels/:kernel_id",
+        "params": [
+          {
+            "name": "kernel_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Stop kernel"
+    },
+    {
+      "info": {
+        "name": "Interrupt kernel",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8888/api/kernels/:kernel_id/interrupt",
+        "params": [
+          {
+            "name": "kernel_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Interrupt kernel"
+    },
+    {
+      "info": {
+        "name": "Restart kernel",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8888/api/kernels/:kernel_id/restart",
+        "params": [
+          {
+            "name": "kernel_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Restart kernel"
+    },
+    {
+      "info": {
+        "name": "List kernel specs",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8888/api/kernelspecs"
+      },
+      "docs": "List kernel specs"
+    },
+    {
+      "info": {
+        "name": "List terminals",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8888/api/terminals"
+      },
+      "docs": "List terminals"
+    },
+    {
+      "info": {
+        "name": "Create terminal",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8888/api/terminals"
+      },
+      "docs": "Create terminal"
+    },
+    {
+      "info": {
+        "name": "Get terminal",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8888/api/terminals/:terminal_id",
+        "params": [
+          {
+            "name": "terminal_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get terminal"
+    },
+    {
+      "info": {
+        "name": "Close terminal",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8888/api/terminals/:terminal_id",
+        "params": [
+          {
+            "name": "terminal_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Close terminal"
+    },
+    {
+      "info": {
+        "name": "Get configuration section",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8888/api/config/:section_name",
+        "params": [
+          {
+            "name": "section_name",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get configuration section"
+    },
+    {
+      "info": {
+        "name": "Update configuration section",
+        "type": "http"
+      },
+      "http": {
+        "method": "PATCH",
+        "url": "http://localhost:8888/api/config/:section_name",
+        "params": [
+          {
+            "name": "section_name",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update configuration section"
+    }
+  ],
+  "bundled": true
+}
