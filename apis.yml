@@ -97,6 +97,8 @@ apis:
       - type: Repository
         url: https://github.com/jupyterlab/jupyterlab
 common:
+  - type: AgenticAccess
+    url: agentic-access/jupyter-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/jupyter-vulnerability-disclosure.yml
   - type: DomainSecurity
