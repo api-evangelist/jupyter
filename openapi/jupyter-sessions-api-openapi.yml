@@ -1,0 +1,81 @@
+openapi: 3.1.0
+info:
+  title: Jupyter Server REST Config Sessions API
+  description: Minimal OpenAPI 3.1 description of the Jupyter Server REST API for managing notebook contents, sessions, kernels, terminals, checkpoints, and configuration.
+  version: 1.0.0
+servers:
+- url: http://localhost:8888
+  description: Local Jupyter Server
+tags:
+- name: Sessions
+paths:
+  /api/sessions:
+    get:
+      summary: List sessions
+      operationId: listSessions
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+      tags:
+      - Sessions
+    post:
+      summary: Create session
+      operationId: createSession
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Sessions
+  /api/sessions/{session}:
+    parameters:
+    - name: session
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Get session
+      operationId: getSession
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Sessions
+    patch:
+      summary: Update session
+      operationId: updateSession
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Sessions
+    delete:
+      summary: Delete session
+      operationId: deleteSession
+      responses:
+        '204':
+          description: Deleted
+      tags:
+      - Sessions
+x-generated-from: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
+x-generated-by: claude-crawl-2026-05-08
