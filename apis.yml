@@ -5,7 +5,19 @@ description: >-
   computing across dozens of programming languages. The Jupyter ecosystem includes Jupyter Notebook, JupyterLab, Jupyter
   Server, JupyterHub, the Jupyter messaging protocol, and supporting client libraries.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jupyter.png
 tags:
   - Data Science
   - Education
@@ -18,84 +30,218 @@ created: '2024-01-01'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: jupyter:jupyter-notebook
-    name: Jupyter Notebook
-    description: >-
-      Original Jupyter web application and REST API for creating, editing, and running notebooks. Includes the kernel
-      messaging protocol and supporting OpenAPI, JSON Schema, and AsyncAPI artifacts.
-    humanURL: https://jupyter-notebook.readthedocs.io/
-    baseURL: http://localhost:8888
-    tags:
-      - Interactive Computing
-      - Kernels
-      - Notebooks
-      - REST API
-    properties:
-      - type: APIsYAML
-        url: https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
-      - type: Documentation
-        url: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
-      - type: Repository
-        url: https://github.com/jupyter/notebook
-      - type: OpenAPI
-        url: openapi/jupyter-openapi.yml
-  - aid: jupyter:jupyter-server
-    name: Jupyter Server
-    description: >-
-      Backend that powers Jupyter Notebook, JupyterLab, and other Jupyter web applications. Exposes the core REST API
-      and the WebSocket messaging endpoints used to communicate with kernels.
-    humanURL: https://jupyter-server.readthedocs.io/en/latest/developers/index.html
-    baseURL: http://localhost:8888/api
-    tags:
-      - Compute
-      - Kernels
-      - REST API
-      - Sessions
-    properties:
-      - type: APIsYAML
-        url: https://raw.githubusercontent.com/api-evangelist/jupyter-server/refs/heads/main/apis.yml
-      - type: Documentation
-        url: https://jupyter-server.readthedocs.io/en/latest/developers/rest-api.html
-      - type: Repository
-        url: https://github.com/jupyter-server/jupyter_server
-  - aid: jupyter:jupyterhub
-    name: JupyterHub
-    description: >-
-      Multi-user server for Jupyter notebooks. Manages authentication, spawns and proxies multiple instances of the
-      single-user Jupyter notebook server, and exposes a REST API for users, groups, services, tokens, and OAuth2.
-    humanURL: https://jupyterhub.readthedocs.io/
-    baseURL: http://localhost:8000/hub/api
-    tags:
-      - Authentication
-      - Hub
-      - Multi-User
-      - OAuth2
-    properties:
-      - type: APIsYAML
-        url: https://raw.githubusercontent.com/api-evangelist/jupyterhub/refs/heads/main/apis.yml
-      - type: Documentation
-        url: https://jupyterhub.readthedocs.io/en/stable/reference/rest-api.html
-      - type: Repository
-        url: https://github.com/jupyterhub/jupyterhub
-  - aid: jupyter:jupyterlab
-    name: JupyterLab
-    description: >-
-      Next-generation web-based interactive development environment for notebooks, code, and data, with a JupyterLab
-      Server REST API for settings, workspaces, themes, translations, and licenses.
-    humanURL: https://jupyterlab.readthedocs.io/
-    baseURL: http://localhost:8888/lab/api
-    tags:
-      - Extensions
-      - IDE
-      - Interactive Computing
-      - Notebooks
-    properties:
-      - type: APIsYAML
-        url: https://raw.githubusercontent.com/api-evangelist/jupyterlab/refs/heads/main/apis.yml
-      - type: Documentation
-        url: https://jupyterlab.readthedocs.io/en/stable/
-      - type: Repository
-        url: https://github.com/jupyterlab/jupyterlab
+- aid: jupyter:jupyter-server
+  name: Jupyter Server
+  description: >-
+    Backend that powers Jupyter Notebook, JupyterLab, and other Jupyter web applications. Exposes the
+    core REST API and the WebSocket messaging endpoints used to communicate with kernels.
+  humanURL: https://jupyter-server.readthedocs.io/en/latest/developers/index.html
+  baseURL: http://localhost:8888/api
+  tags:
+  - Compute
+  - Kernels
+  - REST API
+  - Sessions
+  properties:
+  - type: APIsYAML
+    url: https://raw.githubusercontent.com/api-evangelist/jupyter-server/refs/heads/main/apis.yml
+  - type: Documentation
+    url: https://jupyter-server.readthedocs.io/en/latest/developers/rest-api.html
+  - type: Repository
+    url: https://github.com/jupyter-server/jupyter_server
+- aid: jupyter:jupyterhub
+  name: JupyterHub
+  description: >-
+    Multi-user server for Jupyter notebooks. Manages authentication, spawns and proxies multiple instances
+    of the single-user Jupyter notebook server, and exposes a REST API for users, groups, services, tokens,
+    and OAuth2.
+  humanURL: https://jupyterhub.readthedocs.io/
+  baseURL: http://localhost:8000/hub/api
+  tags:
+  - Authentication
+  - Hub
+  - Multi-User
+  - OAuth2
+  properties:
+  - type: APIsYAML
+    url: https://raw.githubusercontent.com/api-evangelist/jupyterhub/refs/heads/main/apis.yml
+  - type: Documentation
+    url: https://jupyterhub.readthedocs.io/en/stable/reference/rest-api.html
+  - type: Repository
+    url: https://github.com/jupyterhub/jupyterhub
+- aid: jupyter:jupyterlab
+  name: JupyterLab
+  description: >-
+    Next-generation web-based interactive development environment for notebooks, code, and data, with
+    a JupyterLab Server REST API for settings, workspaces, themes, translations, and licenses.
+  humanURL: https://jupyterlab.readthedocs.io/
+  baseURL: http://localhost:8888/lab/api
+  tags:
+  - Extensions
+  - IDE
+  - Interactive Computing
+  - Notebooks
+  properties:
+  - type: APIsYAML
+    url: https://raw.githubusercontent.com/api-evangelist/jupyterlab/refs/heads/main/apis.yml
+  - type: Documentation
+    url: https://jupyterlab.readthedocs.io/en/stable/
+  - type: Repository
+    url: https://github.com/jupyterlab/jupyterlab
+- aid: jupyter:jupyter-config-api
+  name: Jupyter Config API
+  description: The Config API from Jupyter — 1 operation(s) for config.
+  humanURL: https://jupyter-notebook.readthedocs.io/
+  baseURL: http://localhost:8888
+  tags:
+  - Config
+  properties:
+  - type: OpenAPI
+    url: openapi/jupyter-config-api-openapi.yml
+  - type: APIsYAML
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
+  - type: Documentation
+    url: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
+  - type: Repository
+    url: https://github.com/jupyter/notebook
+- aid: jupyter:jupyter-contents-api
+  name: Jupyter Contents API
+  description: The Contents API from Jupyter — 3 operation(s) for contents.
+  humanURL: https://jupyter-notebook.readthedocs.io/
+  baseURL: http://localhost:8888
+  tags:
+  - Contents
+  properties:
+  - type: OpenAPI
+    url: openapi/jupyter-contents-api-openapi.yml
+  - type: APIsYAML
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
+  - type: Documentation
+    url: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
+  - type: Repository
+    url: https://github.com/jupyter/notebook
+- aid: jupyter:jupyter-jupyter-server-rest-api-api
+  name: Jupyter Jupyter Server REST API API
+  description: >-
+    The Jupyter Server REST API API from Jupyter — 1 operation(s) for jupyter server rest api.
+  humanURL: https://jupyter-notebook.readthedocs.io/
+  baseURL: http://localhost:8888
+  tags:
+  - Jupyter Server REST API
+  properties:
+  - type: OpenAPI
+    url: openapi/jupyter-jupyter-server-rest-api-api-openapi.yml
+  - type: APIsYAML
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
+  - type: Documentation
+    url: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
+  - type: Repository
+    url: https://github.com/jupyter/notebook
+- aid: jupyter:jupyter-kernels-api
+  name: Jupyter Kernels API
+  description: The Kernels API from Jupyter — 4 operation(s) for kernels.
+  humanURL: https://jupyter-notebook.readthedocs.io/
+  baseURL: http://localhost:8888
+  tags:
+  - Kernels
+  properties:
+  - type: OpenAPI
+    url: openapi/jupyter-kernels-api-openapi.yml
+  - type: APIsYAML
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
+  - type: Documentation
+    url: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
+  - type: Repository
+    url: https://github.com/jupyter/notebook
+- aid: jupyter:jupyter-kernelspecs-api
+  name: Jupyter Kernelspecs API
+  description: The Kernelspecs API from Jupyter — 1 operation(s) for kernelspecs.
+  humanURL: https://jupyter-notebook.readthedocs.io/
+  baseURL: http://localhost:8888
+  tags:
+  - Kernelspecs
+  properties:
+  - type: OpenAPI
+    url: openapi/jupyter-kernelspecs-api-openapi.yml
+  - type: APIsYAML
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
+  - type: Documentation
+    url: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
+  - type: Repository
+    url: https://github.com/jupyter/notebook
+- aid: jupyter:jupyter-me-api
+  name: Jupyter Me API
+  description: The Me API from Jupyter — 1 operation(s) for me.
+  humanURL: https://jupyter-notebook.readthedocs.io/
+  baseURL: http://localhost:8888
+  tags:
+  - Me
+  properties:
+  - type: OpenAPI
+    url: openapi/jupyter-me-api-openapi.yml
+  - type: APIsYAML
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
+  - type: Documentation
+    url: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
+  - type: Repository
+    url: https://github.com/jupyter/notebook
+- aid: jupyter:jupyter-sessions-api
+  name: Jupyter Sessions API
+  description: The Sessions API from Jupyter — 2 operation(s) for sessions.
+  humanURL: https://jupyter-notebook.readthedocs.io/
+  baseURL: http://localhost:8888
+  tags:
+  - Sessions
+  properties:
+  - type: OpenAPI
+    url: openapi/jupyter-sessions-api-openapi.yml
+  - type: APIsYAML
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
+  - type: Documentation
+    url: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
+  - type: Repository
+    url: https://github.com/jupyter/notebook
+- aid: jupyter:jupyter-status-api
+  name: Jupyter Status API
+  description: The Status API from Jupyter — 1 operation(s) for status.
+  humanURL: https://jupyter-notebook.readthedocs.io/
+  baseURL: http://localhost:8888
+  tags:
+  - Status
+  properties:
+  - type: OpenAPI
+    url: openapi/jupyter-status-api-openapi.yml
+  - type: APIsYAML
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
+  - type: Documentation
+    url: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
+  - type: Repository
+    url: https://github.com/jupyter/notebook
+- aid: jupyter:jupyter-terminals-api
+  name: Jupyter Terminals API
+  description: The Terminals API from Jupyter — 2 operation(s) for terminals.
+  humanURL: https://jupyter-notebook.readthedocs.io/
+  baseURL: http://localhost:8888
+  tags:
+  - Terminals
+  properties:
+  - type: OpenAPI
+    url: openapi/jupyter-terminals-api-openapi.yml
+  - type: APIsYAML
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
+  - type: Documentation
+    url: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
+  - type: Repository
+    url: https://github.com/jupyter/notebook
 common:
   - type: AgenticAccess
     url: agentic-access/jupyter-agentic-access.yml
