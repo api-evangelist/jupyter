@@ -1,0 +1,30 @@
+{
+  "provider": "jupyter",
+  "sources": [
+    "jupyter-config-api-openapi.yml",
+    "jupyter-contents-api-openapi.yml",
+    "jupyter-jupyter-server-rest-api-api-openapi.yml",
+    "jupyter-kernels-api-openapi.yml",
+    "jupyter-kernelspecs-api-openapi.yml",
+    "jupyter-me-api-openapi.yml",
+    "jupyter-sessions-api-openapi.yml",
+    "jupyter-status-api-openapi.yml",
+    "jupyter-terminals-api-openapi.yml"
+  ],
+  "outputs": [
+    "jupyter-config-api-openapi.yml",
+    "jupyter-contents-api-openapi.yml",
+    "jupyter-jupyter-server-rest-api-api-openapi.yml",
+    "jupyter-kernels-api-openapi.yml",
+    "jupyter-kernelspecs-api-openapi.yml",
+    "jupyter-me-api-openapi.yml",
+    "jupyter-sessions-api-openapi.yml",
+    "jupyter-status-api-openapi.yml",
+    "jupyter-terminals-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

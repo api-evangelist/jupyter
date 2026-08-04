@@ -1,0 +1,361 @@
+openapi: 3.1.0
+info:
+  title: Jupyter Server REST API
+  description: Minimal OpenAPI 3.1 description of the Jupyter Server REST API for managing notebook contents, sessions, kernels, terminals, checkpoints, and configuration.
+  version: "1.0.0"
+x-generated-from: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
+x-generated-by: claude-crawl-2026-05-08
+servers:
+  - url: http://localhost:8888
+    description: Local Jupyter Server
+paths:
+  /api/:
+    get:
+      summary: Get server version
+      operationId: getServerVersion
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/status:
+    get:
+      summary: Get server status
+      operationId: getServerStatus
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/me:
+    get:
+      summary: Get current user identity
+      operationId: getCurrentUser
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/contents/{path}:
+    parameters:
+      - name: path
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get file or directory contents
+      operationId: getContents
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      summary: Create new file or directory
+      operationId: createContents
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Created
+    put:
+      summary: Save or upload file
+      operationId: saveContents
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: OK
+    patch:
+      summary: Rename file or directory
+      operationId: renameContents
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: OK
+    delete:
+      summary: Delete file or directory
+      operationId: deleteContents
+      responses:
+        '204':
+          description: Deleted
+  /api/contents/{path}/checkpoints:
+    parameters:
+      - name: path
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: List checkpoints for a file
+      operationId: listCheckpoints
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+    post:
+      summary: Create checkpoint
+      operationId: createCheckpoint
+      responses:
+        '201':
+          description: Created
+  /api/contents/{path}/checkpoints/{checkpoint_id}:
+    parameters:
+      - name: path
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: checkpoint_id
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      summary: Restore checkpoint
+      operationId: restoreCheckpoint
+      responses:
+        '204':
+          description: Restored
+    delete:
+      summary: Delete checkpoint
+      operationId: deleteCheckpoint
+      responses:
+        '204':
+          description: Deleted
+  /api/sessions:
+    get:
+      summary: List sessions
+      operationId: listSessions
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+    post:
+      summary: Create session
+      operationId: createSession
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Created
+  /api/sessions/{session}:
+    parameters:
+      - name: session
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get session
+      operationId: getSession
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    patch:
+      summary: Update session
+      operationId: updateSession
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: OK
+    delete:
+      summary: Delete session
+      operationId: deleteSession
+      responses:
+        '204':
+          description: Deleted
+  /api/kernels:
+    get:
+      summary: List kernels
+      operationId: listKernels
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+    post:
+      summary: Start kernel
+      operationId: startKernel
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Created
+  /api/kernels/{kernel_id}:
+    parameters:
+      - name: kernel_id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get kernel
+      operationId: getKernel
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    delete:
+      summary: Stop kernel
+      operationId: stopKernel
+      responses:
+        '204':
+          description: Stopped
+  /api/kernels/{kernel_id}/interrupt:
+    parameters:
+      - name: kernel_id
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      summary: Interrupt kernel
+      operationId: interruptKernel
+      responses:
+        '204':
+          description: Interrupted
+  /api/kernels/{kernel_id}/restart:
+    parameters:
+      - name: kernel_id
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      summary: Restart kernel
+      operationId: restartKernel
+      responses:
+        '200':
+          description: OK
+  /api/kernelspecs:
+    get:
+      summary: List kernel specs
+      operationId: listKernelSpecs
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/terminals:
+    get:
+      summary: List terminals
+      operationId: listTerminals
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+    post:
+      summary: Create terminal
+      operationId: createTerminal
+      responses:
+        '201':
+          description: Created
+  /api/terminals/{terminal_id}:
+    parameters:
+      - name: terminal_id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get terminal
+      operationId: getTerminal
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    delete:
+      summary: Close terminal
+      operationId: closeTerminal
+      responses:
+        '204':
+          description: Closed
+  /api/config/{section_name}:
+    parameters:
+      - name: section_name
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get configuration section
+      operationId: getConfigSection
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    patch:
+      summary: Update configuration section
+      operationId: updateConfigSection
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: OK
