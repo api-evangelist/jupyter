@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Jupyter Server REST Config Kernelspecs API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Kernelspecs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List kernel specs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8888/api/kernelspecs"
+          },
+          "docs": "List kernel specs"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

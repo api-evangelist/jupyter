@@ -1,0 +1,116 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Jupyter Server REST Config Kernels API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Kernels",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List kernels",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8888/api/kernels"
+          },
+          "docs": "List kernels"
+        },
+        {
+          "info": {
+            "name": "Start kernel",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8888/api/kernels",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Start kernel"
+        },
+        {
+          "info": {
+            "name": "Get kernel",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8888/api/kernels/:kernel_id",
+            "params": [
+              {
+                "name": "kernel_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get kernel"
+        },
+        {
+          "info": {
+            "name": "Stop kernel",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8888/api/kernels/:kernel_id",
+            "params": [
+              {
+                "name": "kernel_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Stop kernel"
+        },
+        {
+          "info": {
+            "name": "Interrupt kernel",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8888/api/kernels/:kernel_id/interrupt",
+            "params": [
+              {
+                "name": "kernel_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Interrupt kernel"
+        },
+        {
+          "info": {
+            "name": "Restart kernel",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8888/api/kernels/:kernel_id/restart",
+            "params": [
+              {
+                "name": "kernel_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Restart kernel"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

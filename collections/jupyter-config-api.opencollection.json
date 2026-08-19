@@ -1,0 +1,58 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Jupyter Server REST Config API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Config",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get configuration section",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8888/api/config/:section_name",
+            "params": [
+              {
+                "name": "section_name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get configuration section"
+        },
+        {
+          "info": {
+            "name": "Update configuration section",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "http://localhost:8888/api/config/:section_name",
+            "params": [
+              {
+                "name": "section_name",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update configuration section"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

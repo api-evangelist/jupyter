@@ -1,0 +1,202 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Jupyter Server REST Config Contents API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Contents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get file or directory contents",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8888/api/contents/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get file or directory contents"
+        },
+        {
+          "info": {
+            "name": "Create new file or directory",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8888/api/contents/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create new file or directory"
+        },
+        {
+          "info": {
+            "name": "Save or upload file",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8888/api/contents/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Save or upload file"
+        },
+        {
+          "info": {
+            "name": "Rename file or directory",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "http://localhost:8888/api/contents/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Rename file or directory"
+        },
+        {
+          "info": {
+            "name": "Delete file or directory",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8888/api/contents/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete file or directory"
+        },
+        {
+          "info": {
+            "name": "List checkpoints for a file",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8888/api/contents/:path/checkpoints",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List checkpoints for a file"
+        },
+        {
+          "info": {
+            "name": "Create checkpoint",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8888/api/contents/:path/checkpoints",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create checkpoint"
+        },
+        {
+          "info": {
+            "name": "Restore checkpoint",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8888/api/contents/:path/checkpoints/:checkpoint_id",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "checkpoint_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Restore checkpoint"
+        },
+        {
+          "info": {
+            "name": "Delete checkpoint",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8888/api/contents/:path/checkpoints/:checkpoint_id",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "checkpoint_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete checkpoint"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

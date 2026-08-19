@@ -1,0 +1,102 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Jupyter Server REST Config Sessions API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Sessions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List sessions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8888/api/sessions"
+          },
+          "docs": "List sessions"
+        },
+        {
+          "info": {
+            "name": "Create session",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8888/api/sessions",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create session"
+        },
+        {
+          "info": {
+            "name": "Get session",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8888/api/sessions/:session",
+            "params": [
+              {
+                "name": "session",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get session"
+        },
+        {
+          "info": {
+            "name": "Update session",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "http://localhost:8888/api/sessions/:session",
+            "params": [
+              {
+                "name": "session",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update session"
+        },
+        {
+          "info": {
+            "name": "Delete session",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8888/api/sessions/:session",
+            "params": [
+              {
+                "name": "session",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete session"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
