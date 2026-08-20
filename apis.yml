@@ -39,6 +39,11 @@ apis:
   baseURL: http://localhost:8888/api
   tags:
   - Compute
+  - Kernel
+  - REST API
+  - Sessions
+  tags_raw:
+  - Compute
   - Kernels
   - REST API
   - Sessions
@@ -58,6 +63,10 @@ apis:
   humanURL: https://jupyterhub.readthedocs.io/
   baseURL: http://localhost:8000/hub/api
   tags:
+  - Authentication
+  - Hub
+  - Multi-User
+  tags_raw:
   - Authentication
   - Hub
   - Multi-User
@@ -146,6 +155,8 @@ apis:
   humanURL: https://jupyter-notebook.readthedocs.io/
   baseURL: http://localhost:8888
   tags:
+  - Kernel
+  tags_raw:
   - Kernels
   properties:
   - type: OpenAPI
