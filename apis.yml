@@ -5,6 +5,19 @@ description: >-
   computing across dozens of programming languages. The Jupyter ecosystem includes Jupyter Notebook, JupyterLab, Jupyter
   Server, JupyterHub, the Jupyter messaging protocol, and supporting client libraries.
 type: Index
+deliveryModel:
+  model: self-hosted
+  license: BSD-3-Clause
+  open_source: true
+  commercial: false
+  callable_host: false
+  label: Self-hosted open source · you run it yourself
+  confidence: high
+  source:
+  - license
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
