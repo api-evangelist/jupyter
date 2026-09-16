@@ -1,9 +1,9 @@
 aid: jupyter
 name: Jupyter
-description: >-
-  Project Jupyter is an open-source initiative that develops the software, open standards, and services for interactive
-  computing across dozens of programming languages. The Jupyter ecosystem includes Jupyter Notebook, JupyterLab, Jupyter
-  Server, JupyterHub, the Jupyter messaging protocol, and supporting client libraries.
+description: Project Jupyter is an open-source initiative that develops the software, open standards,
+  and services for interactive computing across dozens of programming languages. The Jupyter ecosystem
+  includes Jupyter Notebook, JupyterLab, Jupyter Server, JupyterHub, the Jupyter messaging protocol, and
+  supporting client libraries.
 type: Index
 deliveryModel:
   model: self-hosted
@@ -32,22 +32,21 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jupyter.png
 tags:
-  - Data Science
-  - Education
-  - Interactive Computing
-  - Notebooks
-  - Python
-  - Scientific Computing
+- Data Science
+- Education
+- Interactive Computing
+- Notebooks
+- Python
+- Scientific Computing
 url: https://raw.githubusercontent.com/api-evangelist/jupyter/refs/heads/main/apis.yml
 created: '2024-01-01'
-modified: '2026-05-19'
+modified: '2026-09-16'
 specificationVersion: '0.23'
 apis:
 - aid: jupyter:jupyter-server
   name: Jupyter Server
-  description: >-
-    Backend that powers Jupyter Notebook, JupyterLab, and other Jupyter web applications. Exposes the
-    core REST API and the WebSocket messaging endpoints used to communicate with kernels.
+  description: Backend that powers Jupyter Notebook, JupyterLab, and other Jupyter web applications. Exposes
+    the core REST API and the WebSocket messaging endpoints used to communicate with kernels.
   humanURL: https://jupyter-server.readthedocs.io/en/latest/developers/index.html
   baseURL: http://localhost:8888/api
   tags:
@@ -69,10 +68,9 @@ apis:
     url: https://github.com/jupyter-server/jupyter_server
 - aid: jupyter:jupyterhub
   name: JupyterHub
-  description: >-
-    Multi-user server for Jupyter notebooks. Manages authentication, spawns and proxies multiple instances
-    of the single-user Jupyter notebook server, and exposes a REST API for users, groups, services, tokens,
-    and OAuth2.
+  description: Multi-user server for Jupyter notebooks. Manages authentication, spawns and proxies multiple
+    instances of the single-user Jupyter notebook server, and exposes a REST API for users, groups, services,
+    tokens, and OAuth2.
   humanURL: https://jupyterhub.readthedocs.io/
   baseURL: http://localhost:8000/hub/api
   tags:
@@ -93,9 +91,8 @@ apis:
     url: https://github.com/jupyterhub/jupyterhub
 - aid: jupyter:jupyterlab
   name: JupyterLab
-  description: >-
-    Next-generation web-based interactive development environment for notebooks, code, and data, with
-    a JupyterLab Server REST API for settings, workspaces, themes, translations, and licenses.
+  description: Next-generation web-based interactive development environment for notebooks, code, and
+    data, with a JupyterLab Server REST API for settings, workspaces, themes, translations, and licenses.
   humanURL: https://jupyterlab.readthedocs.io/
   baseURL: http://localhost:8888/lab/api
   tags:
@@ -121,8 +118,7 @@ apis:
   - type: OpenAPI
     url: openapi/jupyter-config-api-openapi.yml
   - type: APIsYAML
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
+    url: https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
   - type: Documentation
     url: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
   - type: Repository
@@ -138,16 +134,14 @@ apis:
   - type: OpenAPI
     url: openapi/jupyter-contents-api-openapi.yml
   - type: APIsYAML
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
+    url: https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
   - type: Documentation
     url: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
   - type: Repository
     url: https://github.com/jupyter/notebook
 - aid: jupyter:jupyter-jupyter-server-rest-api-api
-  name: Jupyter Jupyter Server REST API API
-  description: >-
-    The Jupyter Server REST API API from Jupyter — 1 operation(s) for jupyter server rest api.
+  name: Jupyter Server REST API
+  description: The Jupyter Server REST API API from Jupyter — 1 operation(s) for jupyter server rest api.
   humanURL: https://jupyter-notebook.readthedocs.io/
   baseURL: http://localhost:8888
   tags:
@@ -156,8 +150,7 @@ apis:
   - type: OpenAPI
     url: openapi/jupyter-jupyter-server-rest-api-api-openapi.yml
   - type: APIsYAML
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
+    url: https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
   - type: Documentation
     url: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
   - type: Repository
@@ -175,8 +168,7 @@ apis:
   - type: OpenAPI
     url: openapi/jupyter-kernels-api-openapi.yml
   - type: APIsYAML
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
+    url: https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
   - type: Documentation
     url: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
   - type: Repository
@@ -192,8 +184,7 @@ apis:
   - type: OpenAPI
     url: openapi/jupyter-kernelspecs-api-openapi.yml
   - type: APIsYAML
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
+    url: https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
   - type: Documentation
     url: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
   - type: Repository
@@ -209,8 +200,7 @@ apis:
   - type: OpenAPI
     url: openapi/jupyter-me-api-openapi.yml
   - type: APIsYAML
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
+    url: https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
   - type: Documentation
     url: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
   - type: Repository
@@ -226,8 +216,7 @@ apis:
   - type: OpenAPI
     url: openapi/jupyter-sessions-api-openapi.yml
   - type: APIsYAML
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
+    url: https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
   - type: Documentation
     url: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
   - type: Repository
@@ -243,8 +232,7 @@ apis:
   - type: OpenAPI
     url: openapi/jupyter-status-api-openapi.yml
   - type: APIsYAML
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
+    url: https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
   - type: Documentation
     url: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
   - type: Repository
@@ -260,49 +248,48 @@ apis:
   - type: OpenAPI
     url: openapi/jupyter-terminals-api-openapi.yml
   - type: APIsYAML
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
+    url: https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml
   - type: Documentation
     url: https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html
   - type: Repository
     url: https://github.com/jupyter/notebook
 common:
-  - type: IssueTracker
-    url: https://github.com/jupyter-server/jupyter_server/issues
-  - type: Releases
-    url: https://github.com/jupyter-server/jupyter_server/releases
-  - type: CodeOfConduct
-    url: https://github.com/jupyter-server/.github/blob/main/CODE_OF_CONDUCT.md
-  - type: ContributionGuide
-    url: https://github.com/jupyter-server/jupyter_server/blob/main/CONTRIBUTING.rst
-  - type: License
-    name: BSD-3-Clause
-    url: https://github.com/jupyter-server/jupyter_server/blob/main/LICENSE
-  - type: AgenticAccess
-    url: agentic-access/jupyter-agentic-access.yml
-  - type: VulnerabilityDisclosure
-    url: security/jupyter-vulnerability-disclosure.yml
-  - type: DomainSecurity
-    url: security/jupyter-domain-security.yml
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/project-jupyter
-  - type: Website
-    url: https://jupyter.org
-  - type: Documentation
-    url: https://docs.jupyter.org/
-  - type: Blog
-    url: https://blog.jupyter.org/
-  - type: GitHubOrganization
-    url: https://github.com/jupyter
-  - type: Community
-    url: https://jupyter.org/community
-  - type: Support
-    url: https://discourse.jupyter.org/
-  - type: Security
-    url: https://jupyter.org/security
-  - type: YouTube
-    url: https://www.youtube.com/@ProjectJupyter
+- type: IssueTracker
+  url: https://github.com/jupyter-server/jupyter_server/issues
+- type: Releases
+  url: https://github.com/jupyter-server/jupyter_server/releases
+- type: CodeOfConduct
+  url: https://github.com/jupyter-server/.github/blob/main/CODE_OF_CONDUCT.md
+- type: ContributionGuide
+  url: https://github.com/jupyter-server/jupyter_server/blob/main/CONTRIBUTING.rst
+- type: License
+  name: BSD-3-Clause
+  url: https://github.com/jupyter-server/jupyter_server/blob/main/LICENSE
+- type: AgenticAccess
+  url: agentic-access/jupyter-agentic-access.yml
+- type: VulnerabilityDisclosure
+  url: security/jupyter-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/jupyter-domain-security.yml
+- type: LinkedIn
+  url: https://www.linkedin.com/company/project-jupyter
+- type: Website
+  url: https://jupyter.org
+- type: Documentation
+  url: https://docs.jupyter.org/
+- type: Blog
+  url: https://blog.jupyter.org/
+- type: GitHubOrganization
+  url: https://github.com/jupyter
+- type: Community
+  url: https://jupyter.org/community
+- type: Support
+  url: https://discourse.jupyter.org/
+- type: Security
+  url: https://jupyter.org/security
+- type: YouTube
+  url: https://www.youtube.com/@ProjectJupyter
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
-    url: https://apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
+  url: https://apievangelist.com
