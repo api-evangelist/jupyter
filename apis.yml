@@ -244,6 +244,8 @@ apis:
   humanURL: https://jupyter-notebook.readthedocs.io/
   baseURL: http://localhost:8888
   tags:
+  - Terminal
+  tags_raw:
   - Terminals
   properties:
   - type: OpenAPI
