@@ -260,6 +260,12 @@ apis:
   - type: Repository
     url: https://github.com/jupyter/notebook
 common:
+- type: Plans
+  url: plans/jupyter-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/jupyter-rate-limits.yml
+- type: FinOps
+  url: finops/jupyter-finops.yml
 - type: IssueTracker
   url: https://github.com/jupyter-server/jupyter_server/issues
 - type: Releases
