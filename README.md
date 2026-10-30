@@ -1,4 +1,4 @@
-# Jupyter (jupyter)
+# Jupyter
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,131 +66,137 @@
 
 Project Jupyter is an open-source initiative that develops the software, open standards, and services for interactive computing across dozens of programming languages. The Jupyter ecosystem includes Jupyter Notebook, JupyterLab, Jupyter Server, JupyterHub, the Jupyter messaging protocol, and supporting client libraries.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/jupyter/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/jupyter/refs/heads/main/apis.yml)
+**Areas:** Data Science · Education · Interactive Computing · Notebooks · Python · Scientific Computing · Jupyter
 
-## Scope
+## Jupyter on APIs.io
 
-- **Type:** Index
+Everything profiled for Jupyter is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/jupyter/](https://apis.io/providers/jupyter/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (12)
 
-- Data Science
-- Education
-- Interactive Computing
-- Notebooks
-- Python
-- Scientific Computing
+- [Jupyter Server](https://apis.io/apis/jupyter/jupyter-server/) — Backend that powers Jupyter Notebook, JupyterLab, and other Jupyter web applications. Exposes the core REST API and the WebSocket messaging endpoints used…
+- [JupyterHub](https://apis.io/apis/jupyter/jupyterhub/) — Multi-user server for Jupyter notebooks. Manages authentication, spawns and proxies multiple instances of the single-user Jupyter notebook server, and…
+- [JupyterLab](https://apis.io/apis/jupyter/jupyterlab/) — Next-generation web-based interactive development environment for notebooks, code, and data, with a JupyterLab Server REST API for settings, workspaces,…
+- [Jupyter Config API](https://apis.io/apis/jupyter/jupyter-config-api/) — The Config API from Jupyter — 1 operation(s) for config.
+- [Jupyter Contents API](https://apis.io/apis/jupyter/jupyter-contents-api/) — The Contents API from Jupyter — 3 operation(s) for contents.
+- [Jupyter Server REST API](https://apis.io/apis/jupyter/jupyter-jupyter-server-rest-api-api/) — The Jupyter Server REST API API from Jupyter — 1 operation(s) for jupyter server rest api.
+- [Jupyter Kernels API](https://apis.io/apis/jupyter/jupyter-kernels-api/) — The Kernels API from Jupyter — 4 operation(s) for kernels.
+- [Jupyter Kernelspecs API](https://apis.io/apis/jupyter/jupyter-kernelspecs-api/) — The Kernelspecs API from Jupyter — 1 operation(s) for kernelspecs.
+- [Jupyter Me API](https://apis.io/apis/jupyter/jupyter-me-api/) — The Me API from Jupyter — 1 operation(s) for me.
+- [Jupyter Sessions API](https://apis.io/apis/jupyter/jupyter-sessions-api/) — The Sessions API from Jupyter — 2 operation(s) for sessions.
+- [Jupyter Status API](https://apis.io/apis/jupyter/jupyter-status-api/) — The Status API from Jupyter — 1 operation(s) for status.
+- [Jupyter Terminals API](https://apis.io/apis/jupyter/jupyter-terminals-api/) — The Terminals API from Jupyter — 2 operation(s) for terminals.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-01-01
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Jupyter Notebook
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Original Jupyter web application and REST API for creating, editing, and running notebooks. Includes the kernel messaging protocol and supporting OpenAPI, JSON Schema, and AsyncAPI artifacts.
+- [Jupyter Agentic Access](https://apis.io/agentic-access/jupyter/jupyter-agentic-access/)
 
-- **Human URL:** [https://jupyter-notebook.readthedocs.io/](https://jupyter-notebook.readthedocs.io/)
-- **Base URL:** `http://localhost:8888`
+#### Collections (10)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Interactive Computing
-- Kernels
-- Notebooks
-- REST API
+- [Jupyter Server REST API](https://apis.io/collections/jupyter/open-jupyter/)
+- [Jupyter Server REST Config API](https://apis.io/collections/jupyter/open-jupyter-config-api/)
+- [Jupyter Server REST Config Contents API](https://apis.io/collections/jupyter/open-jupyter-contents-api/)
+- [Jupyter Server REST Config Jupyter Server REST API API](https://apis.io/collections/jupyter/open-jupyter-jupyter-server-rest-api-api/)
+- [Jupyter Server REST Config Kernels API](https://apis.io/collections/jupyter/open-jupyter-kernels-api/)
+- [Jupyter Server REST Config Kernelspecs API](https://apis.io/collections/jupyter/open-jupyter-kernelspecs-api/)
+- [Jupyter Server REST Config Me API](https://apis.io/collections/jupyter/open-jupyter-me-api/)
+- [Jupyter Server REST Config Sessions API](https://apis.io/collections/jupyter/open-jupyter-sessions-api/)
+- [Jupyter Server REST Config Status API](https://apis.io/collections/jupyter/open-jupyter-status-api/)
+- [Jupyter Server REST Config Terminals API](https://apis.io/collections/jupyter/open-jupyter-terminals-api/)
 
-#### Properties
+#### Security (2)
 
-- [A P Is Y A M L](https://raw.githubusercontent.com/api-evangelist/jupyter-notebook/refs/heads/main/apis.yml)
-- [Documentation](https://jupyter-notebook.readthedocs.io/en/stable/rest_api.html)
-- [Repository](https://github.com/jupyter/notebook)
-- [OpenAPI](openapi/jupyter-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/jupyter.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/jupyter.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### Jupyter Server
+- [Jupyter Domain Security](https://apis.io/security/jupyter/jupyter-domain-security/)
+- [Jupyter Vulnerability Disclosure](https://apis.io/security/jupyter/jupyter-vulnerability-disclosure/)
 
-Backend that powers Jupyter Notebook, JupyterLab, and other Jupyter web applications. Exposes the core REST API and the WebSocket messaging endpoints used to communicate with kernels.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://jupyter-server.readthedocs.io/en/latest/developers/index.html](https://jupyter-server.readthedocs.io/en/latest/developers/index.html)
-- **Base URL:** `http://localhost:8888/api`
+Published plans, tiers and prices.
 
-#### Tags
+- [Jupyter Plans Pricing](https://apis.io/plans/jupyter/jupyter-plans-pricing/)
 
-- Compute
-- Kernels
-- REST API
-- Sessions
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [A P Is Y A M L](https://raw.githubusercontent.com/api-evangelist/jupyter-server/refs/heads/main/apis.yml)
-- [Documentation](https://jupyter-server.readthedocs.io/en/latest/developers/rest-api.html)
-- [Repository](https://github.com/jupyter-server/jupyter_server)
-- [Postman Collection](collections/jupyter.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/jupyter.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Jupyter Rate Limits](https://apis.io/rate-limits/jupyter/jupyter-rate-limits/)
 
-### JupyterHub
+#### FinOps (1)
 
-Multi-user server for Jupyter notebooks. Manages authentication, spawns and proxies multiple instances of the single-user Jupyter notebook server, and exposes a REST API for users, groups, services, tokens, and OAuth2.
+What the API costs to run, by operation.
 
-- **Human URL:** [https://jupyterhub.readthedocs.io/](https://jupyterhub.readthedocs.io/)
-- **Base URL:** `http://localhost:8000/hub/api`
+- [Jupyter Finops](https://apis.io/finops/jupyter/jupyter-finops/)
 
-#### Tags
+## Where to find this API
 
-- Authentication
-- Hub
-- Multi-User
-- OAuth2
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Properties
-
-- [A P Is Y A M L](https://raw.githubusercontent.com/api-evangelist/jupyterhub/refs/heads/main/apis.yml)
-- [Documentation](https://jupyterhub.readthedocs.io/en/stable/reference/rest-api.html)
-- [Repository](https://github.com/jupyterhub/jupyterhub)
-- [Postman Collection](collections/jupyter.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/jupyter.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### JupyterLab
-
-Next-generation web-based interactive development environment for notebooks, code, and data, with a JupyterLab Server REST API for settings, workspaces, themes, translations, and licenses.
-
-- **Human URL:** [https://jupyterlab.readthedocs.io/](https://jupyterlab.readthedocs.io/)
-- **Base URL:** `http://localhost:8888/lab/api`
-
-#### Tags
-
-- Extensions
-- IDE
-- Interactive Computing
-- Notebooks
-
-#### Properties
-
-- [A P Is Y A M L](https://raw.githubusercontent.com/api-evangelist/jupyterlab/refs/heads/main/apis.yml)
-- [Documentation](https://jupyterlab.readthedocs.io/en/stable/)
-- [Repository](https://github.com/jupyterlab/jupyterlab)
-- [Postman Collection](collections/jupyter.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/jupyter.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/project-jupyter)
 - [Website](https://jupyter.org)
 - [Documentation](https://docs.jupyter.org/)
-- [Blog](https://blog.jupyter.org/)
-- [GitHub Organization](https://github.com/jupyter)
-- [Community](https://jupyter.org/community)
 - [Support](https://discourse.jupyter.org/)
+- [Blog](https://blog.jupyter.org/)
 - [Security](https://jupyter.org/security)
-- [YouTube](https://www.youtube.com/@ProjectJupyter)
+- [GitHub](https://github.com/jupyter)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
-**URL:** https://apievangelist.com
+**Kin Score 27.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 37.1 |
+| Contract governance | 0.0 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 7.9 |
+
+**Agent readiness 17.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/jupyter/](https://apis.io/providers/jupyter/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Jupyter: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/jupyter/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
